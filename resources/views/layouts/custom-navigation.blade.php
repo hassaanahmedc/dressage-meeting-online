@@ -2,10 +2,10 @@
     <ul class="flex flex-wrap justify-center">
         <li
             class="bg-red-800 text-lg hover:border-red-800 hover:bg-gray-800 text-gray-50 border border-1 border-gray-800">
-            <a class="p-4" href="javasript:void(0)">Home</a></li>
+            <a class="p-4" href="{{ route('home') }}">Home</a></li>
         <li
             class="bg-red-800 text-lg hover:border-red-800 hover:bg-gray-800 text-gray-50 border border-1 border-gray-800">
-            <a class="p-4" href="javasript:void(0)">About Us</a></li>
+            <a class="p-4" href="{{ route('about-us') }}">About Us</a></li>
         <li
             class="bg-red-800 text-lg hover:border-red-800 hover:bg-gray-800 text-gray-50 border border-1 border-gray-800">
             <a class="p-4" href="javasript:void(0)">Educators</a></li>

@@ -19,6 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+Route::get('/about-us', function () {
+    return view('about-us');
+})->name('about-us');
+
 Route::post('/newsletter-members/store', [NewsletterMemberController::class, 'store'])->name('newsletter-members.store');
 
 Route::get('/dashboard', function () {
