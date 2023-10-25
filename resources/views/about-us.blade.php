@@ -241,7 +241,7 @@
                     <br>
                 </section>
                 {{-- {{Sponsorships & Advertising}} --}}
-                <section id=sponsorships_advertising"
+                <section id="sponsorships_advertising"
                     class="border-2 rounded-xl border-purple-500 py-2 px-4">
                     <h3 class="text-2xl">Kate O’Connor, Sponsorships &
                         Advertising
@@ -278,10 +278,60 @@
                     </div>
                 </section>
             </main>
-
             <aside id="sponsors"
-                class="basis-1/4 border border-cyan-500">
-                sponsors info will be here
+                class="flex  flex-col basis-1/4 gap-3">
+                <section
+                    class="border-2 rounded-xl border-purple-500 py-2 px-4">
+                    <div
+                        class="flex flex-col gap-6  justify-center items-center">
+                        <figure>
+                            <img src="{{ Vite::asset('resources/images/our_team.png') }}"
+                                alt="">
+                        </figure>
+                        <h3 class="py-3.5 text-blue font-bold text-xl">About Our
+                            team</h3>
+                    </div>
+                    <article class="text-justify text-sm">
+                        <p class="pt-4">
+                            DressageMeetingOnline has a dedicated team of
+                            equestrian and technology professionals on staff to
+                            bring you the easiest and newest way to connect to
+                            your favorite Dressage educator for a one-of-a-kind
+                            interactive experience.
+                        </p>
+
+                        <p class="pt-4">
+                            We are focused on providing a fun and memorable
+                            experience each and every time you choose to
+                            participate in one of our LIVE sessions. We offer
+                            first class support and passion for what we do.
+                        </p>
+
+                        <p class="pt-4">
+                            We can't wait to see you in our next scheduled
+                            Webinar!
+                        </p>
+                    </article>
+                </section>
+
+                <section id="calender">
+                    calemder here
+                </section>
+
+                <section id="newsletter">
+                    <x-newsletter-signup />
+                </section>
+
+                <section id="contact"
+                    class="border-2 rounded-xl border-yellow-700 py-2 px-4">
+                    <h3 class=" text-2xl text-center text-yellow-700">Questions?
+                    </h3>
+                    <p class="pt-2 text-center">
+                        If you have any Questions
+                        about our Webinars,
+                        Call<span class="text-yellow-700">1-604-746-9222</span>
+                    </p>
+                </section>
             </aside>
         </div>
     </div>
