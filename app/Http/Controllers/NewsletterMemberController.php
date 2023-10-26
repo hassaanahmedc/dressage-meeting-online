@@ -17,6 +17,6 @@ class NewsletterMemberController extends Controller
             ['name' => $validated['first_name'].' '.$validated['last_name']]
         );
 
-        return redirect()->route('home');
+        return redirect()->back();
     }
 }

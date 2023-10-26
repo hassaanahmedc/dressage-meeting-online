@@ -17,7 +17,6 @@
                 placeholder="Enter your first name"
                 :value="old('first_name')"
                 required
-                autofocus
                 autocomplete="first_name" />
             <x-input-error :messages="$errors->get('first_name')"
                 class="mt-2" />
@@ -30,7 +29,6 @@
                 placeholder="Enter your last name"
                 :value="old('last_name')"
                 required
-                autofocus
                 autocomplete="last_name" />
             <x-input-error :messages="$errors->get('last_name')"
                 class="mt-2" />

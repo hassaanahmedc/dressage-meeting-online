@@ -7,7 +7,8 @@
             class="flex flex-row gap-4">
             <main id="our_team"
                 class=" flex  flex-col basis-3/4 gap-3">
-                <section id="about_dressage"
+                <section x-data="{ show_more: false }"
+                    id="about_dressage"
                     class="border-2 rounded-xl border-purple-500 py-2 px-4">
                     <h3 class="text-2xl">About DressageMeetingOnline.com</h3>
                     <article id="content_info">
@@ -42,12 +43,37 @@
                                 across the globe, anyone with a phone line and
                                 broadband internet connection
                             </span>
+                            <span x-cloak
+                                x-show="show_more">
+                                can now attend access the information, coaching
+                                and instruction they need to improve their
+                                Dressage skills in an up close and personal way
+                                never before available.
+
+                                Our catalog of Dressage Webinars offers live
+                                opportunities to participate, recorded versions
+                                for those who wish to enjoy the benefit of a
+                                session and couldn’t attend the live session, as
+                                well as the choice to attend our FREE webinars,
+                                presented by various organizations, companies
+                                and friends of Dressage. Our support team is
+                                here to assist you with your questions and guide
+                                you as join your first of many webinars with
+                                DressageMeetingOnline to come. We are thrilled
+                                to have you join us on this journey into the
+                                future of Dressage Education.
+
+                                See you online soon!
+
+                            </span>
                         </p>
                     </article>
                     <div id="read_more_btn">
                         <button id="readMoreButton"
-                            class="p-2 text-center font-bold text-white bg-gradient-to-b from-pink-400 to bg-purple-950 w-28">Read
-                            More</button>
+                            x-text="show_more ? 'Read Less' : 'Read More'"
+                            x-on:click="show_more = !show_more"
+                            class="p-2 text-center font-bold text-white bg-gradient-to-b from-pink-400 to bg-purple-950 w-28">
+                        </button>
                     </div>
                     <br>
                 </section>
@@ -102,7 +128,7 @@
                 </section>
                 {{-- {{Managing Director}} --}}
                 <section id="managing_director"
-                    class="border-2 rounded-xl border-purple-500 py-2 px-4">
+                    class="border-2 rounded-xl border-purple-500 border-from py-2 px-4">
                     <h3 class="text-2xl">Suzanne La Licata, Managing Director
                     </h3>
                     <div id="container"
@@ -281,7 +307,7 @@
             <aside id="sponsors"
                 class="flex  flex-col basis-1/4 gap-3">
                 <section
-                    class="border-2 rounded-xl border-purple-500 py-2 px-4">
+                    class="border-2 bg-white rounded-xl border-purple-500 py-2 px-4">
                     <div
                         class="flex flex-col gap-6  justify-center items-center">
                         <figure>
@@ -324,7 +350,8 @@
 
                 <section id="contact"
                     class="border-2 rounded-xl border-yellow-700 py-2 px-4">
-                    <h3 class=" text-2xl text-center text-yellow-700">Questions?
+                    <h3 class=" text-2xl text-center text-yellow-700">
+                        Questions?
                     </h3>
                     <p class="pt-2 text-center">
                         If you have any Questions
