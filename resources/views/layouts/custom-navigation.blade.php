@@ -17,7 +17,7 @@
             <a class="p-4" href="javasript:void(0)">FREE Webinars</a></li>
         <li
             class="bg-red-800 text-lg hover:border-red-800 hover:bg-gray-800 text-gray-50 border border-1 border-gray-800">
-            <a class="p-4" href="javasript:void(0)">How It Works</a></li>
+            <a class="p-4" href="{{ route('how-it-works') }}">How It Works</a></li>
         <li
             class="bg-red-800 text-lg hover:border-red-800 hover:bg-gray-800 text-gray-50 border border-1 border-gray-800">
             <a class="p-4" href="javasript:void(0)">Recorded Webinars</a></li>

@@ -23,6 +23,11 @@ Route::get('/about-us', function () {
     return view('about-us');
 })->name('about-us');
 
+Route::get('/how-it-works', function () {
+    return view('how-it-works');
+})->name('how-it-works');
+
+
 Route::post('/newsletter-members/store', [NewsletterMemberController::class, 'store'])->name('newsletter-members.store');
 
 Route::get('/dashboard', function () {

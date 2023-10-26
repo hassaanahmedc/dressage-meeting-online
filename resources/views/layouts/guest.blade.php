@@ -25,6 +25,7 @@
             <div class="w-full mt-6 px-6 py-4">
                 {{ $slot }}
             </div>
+            @include('layouts.custom-footer')
         </div>
     </body>
 </html>
