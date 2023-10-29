@@ -72,19 +72,21 @@
                         <button id="readMoreButton"
                             x-text="show_more ? 'Read Less' : 'Read More'"
                             x-on:click="show_more = !show_more"
-                            class="p-2 text-center font-bold text-white bg-gradient-to-b from-pink-400 to bg-purple-950 w-28">
+                            class="p-2 text-center font-bold text-white w-28 bg-gradient-to-b from-pink-400 to bg-purple-950 hover:from-slate-400 hover:to-gray-900">
                         </button>
+
                     </div>
                     <br>
                 </section>
                 {{-- {{Executive Director}} --}}
                 <section id="executive_director"
+                    x-data="{ show_more: false }"
                     class="border-2 rounded-xl border-purple-500 py-2 px-4">
                     <h3 class="text-2xl">Andreas Stano, Executive Director</h3>
                     <div id="container"
                         class="flex flex-row-reverse gap-4 items-center">
                         <article id="content_info">
-                            <p class="text-justify my-3 text-sm">
+                            <p class="text-justify mt-3 text-sm">
                                 <br>
                                 <span>
                                     Andreas Stano is presently the Executive
@@ -111,7 +113,55 @@
                                     dynamic management style, has turned Select
                                     Media Inc. into one of the most successful
                                     and
-                                    highly
+                                    highly esteemed equestrian media companies
+                                    in the world.
+                                </span>
+                            </p>
+                            <p x-cloak
+                                x-show="show_more"
+                                class="text-justify text-sm">
+                                <br>
+                                <span>
+                                    During the 90′s, for a ten year period,
+                                    Andreas was CEO of HCM Ltd., an
+                                    international concert management firm
+                                    representing classical music artists and
+                                    organizing live concerts for opera singer
+                                    Luciano Pavarotti, ballet dancer Mikahl
+                                    Baryishnikov and Martha Graham, world famous
+                                    violinist Yehudi Menuhin as well as all
+                                    symphonies from Europe and North America.
+                                    Andreas also worked closely with pop artists
+                                    such as James Brown, Barry White, Jerry Lee
+                                    Lewis and Chuck Berry as well as family
+                                    entertainment groups such as Walt Disney’s
+                                    World On Ice, Harlem Globetrotters.
+                                    <br>
+                                    Being a competitive equestrian for over 35
+                                    years, 21 years as a Grand Prix jumper rider
+                                    and 15 years as a dressage rider, Andreas
+                                    decided in 2002 to let go of his previous
+                                    concert duties and concentrate fully on the
+                                    development of Dressage Education, leading
+                                    to the establishment of Select Media Inc. to
+                                    the present day.
+                                    <br>
+                                    <br>
+                                    During the late 70′s and early 80′s, Andreas
+                                    was Assistant to the President of Select
+                                    Press Ltd., a leading book
+                                    and magazine publishing firm based in
+                                    Montreal overseeing operations of the
+                                    European divisions as well as the North
+                                    America divisions.
+                                    <br>
+                                    <br>
+                                    Today, Andreas is regarded as the dressage
+                                    industries’ expert for the implementation
+                                    and realization of innovative methods and
+                                    technologies for the further development of
+                                    dressage education for all serious riders
+                                    around the world.
                                 </span>
                             </p>
                         </article>
@@ -119,22 +169,26 @@
                             class="flex gap-2 flex-col">
                             <img class="object-scale-down"
                                 src="{{ Vite::asset('resources/images/director.png') }}">
-                            <button id="readMoreButton"
-                                class="p-2 text-center font-bold text-white bg-gradient-to-b from-pink-400 to bg-purple-950 w-28">Read
+                            <button
+                                x-text="show_more ? 'Read Less' : 'Read More'"
+                                x-on:click="show_more = !show_more"
+                                id="readMoreButton"
+                                class="p-2 text-center font-bold text-white bg-gradient-to-b from-pink-400 to bg-purple-950 hover:from-slate-400 hover:to-gray-900 w-28">Read
                                 More</button>
                         </div>
                     </div>
                     <br>
                 </section>
                 {{-- {{Managing Director}} --}}
-                <section id="managing_director"
+                <section x-data="{ show_more: false }"
+                    id="managing_director"
                     class="border-2 rounded-xl border-purple-500 border-from py-2 px-4">
                     <h3 class="text-2xl">Suzanne La Licata, Managing Director
                     </h3>
                     <div id="container"
                         class="flex flex-row-reverse gap-4 items-center">
                         <article id="content_info">
-                            <p class="text-justify my-3 text-sm">
+                            <p class="text-justify mt-3 text-sm">
                                 <br>
                                 <span>
                                     Suzanne brings her 20 year career specialty
@@ -153,7 +207,25 @@
                                     memorable and meaningful results happen.
                                     It’s her pleasure and passion to introduce
                                     this vibrant and personal experience to
-                                    those who may
+                                    those who may not otherwise have an
+                                    opportunity to listen, watch and learn from
+                                    top educators in the Dressage world.
+                                </span>
+                            </p>
+
+                            <p x-cloak
+                                x-show="show_more"
+                                class="text-justify text-sm">
+                                <br>
+                                <span>
+                                    Conducting live, interactive learning
+                                    opportunities is an exciting privilege to be
+                                    part of, while keeping up with current
+                                    programs, devices and media is made
+                                    comfortable through her lifelong love of
+                                    learning how things work, collaborating to
+                                    make positive changes happen and sharing
+                                    this knowledge with others.
                                 </span>
                             </p>
                         </article>
@@ -161,8 +233,11 @@
                             class="flex gap-2 flex-col">
                             <img class="object-scale-down"
                                 src="{{ Vite::asset('resources/images/managing_director.png') }}">
-                            <button id="readMoreButton"
-                                class="p-2 text-center font-bold text-white bg-gradient-to-b from-pink-400 to bg-purple-950 w-28">Read
+                            <button
+                                x-text="show_more ? 'Read Less' : 'Read More'"
+                                x-on:click="show_more = !show_more"
+                                id="readMoreButton"
+                                class="p-2 text-center font-bold text-white bg-gradient-to-b from-pink-400 to bg-purple-950 hover:from-slate-400 hover:to-gray-900 w-28">Read
                                 More</button>
                         </div>
                     </div>
@@ -225,7 +300,8 @@
                     <br>
                 </section>
                 {{-- {{Customer Care}} --}}
-                <section id="customer_care"
+                <section x-data="{ show_more: false }"
+                    id="customer_care"
                     class="border-2 rounded-xl border-purple-500 py-2 px-4">
                     <h3 class="text-2xl">Gail Herrell, Director of Customer Care
                     </h3>
@@ -252,6 +328,13 @@
                                     Gail enjoys her free time riding her horse,
                                     as well as
                                 </span>
+                                <span x-cloak
+                                    x-show="show_more">
+                                    caring for her many other pets, studying
+                                    oriental brush painting and spending time
+                                    out in the South Florida sunshine enjoying
+                                    water sports.
+                                </span>
                             </p>
                         </article>
 
@@ -259,8 +342,11 @@
                             class="flex gap-4 flex-col mt-6">
                             <img class="object-scale-down"
                                 src="{{ Vite::asset('resources/images/customer_care.png') }}">
-                            <button id="readMoreButton"
-                                class="p-2 text-center font-bold text-white bg-gradient-to-b from-pink-400 to bg-purple-950 w-28">Read
+                            <button
+                                x-text="show_more ? 'Read Less' : 'Read More'"
+                                x-on:click="show_more = !show_more"
+                                id="readMoreButton"
+                                class="p-2 text-center font-bold text-white bg-gradient-to-b from-pink-400 to bg-purple-950 hover:from-slate-400 hover:to-gray-900 w-28">Read
                                 More</button>
                         </div>
                     </div>
@@ -307,14 +393,15 @@
             <aside id="sponsors"
                 class="flex  flex-col basis-1/4 gap-3">
                 <section
-                    class="border-2 bg-white rounded-xl border-purple-500 py-2 px-4">
+                    class="border-2  rounded-xl border-purple-500 py-2 px-4">
                     <div
                         class="flex flex-col gap-6  justify-center items-center">
                         <figure>
                             <img src="{{ Vite::asset('resources/images/our_team.png') }}"
                                 alt="">
                         </figure>
-                        <h3 class="py-3.5 text-blue font-bold text-xl">About Our
+                        <h3 class="py-3.5 text-blue font-bold text-xl">About
+                            Our
                             team</h3>
                     </div>
                     <article class="text-justify text-sm">
