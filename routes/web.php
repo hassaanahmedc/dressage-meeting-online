@@ -27,6 +27,9 @@ Route::get('/how-it-works', function () {
     return view('how-it-works');
 })->name('how-it-works');
 
+Route::get('/contact-us', function () {
+    return view('contact-us');
+})->name('contact-us');
 
 Route::post('/newsletter-members/store', [NewsletterMemberController::class, 'store'])->name('newsletter-members.store');
 
