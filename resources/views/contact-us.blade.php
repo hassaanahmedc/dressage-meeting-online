@@ -24,13 +24,13 @@
                     </p>
                     <div id=form_container>
                         <form method="POST"
-                            class="flex flex-col pb-2 w-3/5"
-                            action="{{ route('newsletter-members.store') }}">
+                            class="flex flex-col pb-2 w-3/4"
+                            action="{{ route('contact-us.store') }}">
                             @csrf
                             <!-- Name -->
                             <div id="textfield_container"
                                 class="px-4 py-2 flex flex-col gap-1">
-                                <div>
+                                <div class="relative">
                                     <x-text-input id="field_name"
                                         class="block mt-1 w-full px-1 py-1 shadow-gray-500"
                                         type="text"
@@ -39,6 +39,8 @@
                                         :value="old('full_name')"
                                         required
                                         autocomplete="full_name" />
+                                    <span
+                                        class="absolute bottom-0 -right-4 text-red-700">*</span>
                                     <x-input-error :messages="$errors->get('full_name')"
                                         class="mt-2 " />
                                 </div>
@@ -50,13 +52,12 @@
                                         name="organization"
                                         placeholder="Enter Your Company/Organization"
                                         :value="old('organization')"
-                                        required
                                         autocomplete="organization" />
                                     <x-input-error :messages="$errors->get('organization')"
                                         class="mt-2" />
                                 </div>
                                 <!-- Email Address -->
-                                <div>
+                                <div class="relative">
                                     <x-text-input id="field_email"
                                         class="block mt-1 w-full px-1 py-1 shadow-gray-500"
                                         type="email"
@@ -65,11 +66,13 @@
                                         :value="old('email')"
                                         required
                                         autocomplete="email" />
+                                    <span
+                                        class="absolute bottom-0 -right-4 text-red-700">*</span>
                                     <x-input-error :messages="$errors->get('email')"
                                         class="mt-2" />
                                 </div>
                                 <!-- Phone Number -->
-                                <div>
+                                <div class="relative">
                                     <x-text-input id="field_phone"
                                         class="block mt-1 w-full px-1 py-1 shadow-gray-500"
                                         type="text"
@@ -78,6 +81,8 @@
                                         :value="old('phone')"
                                         required
                                         autocomplete="phone" />
+                                    <span
+                                        class="absolute bottom-0 -right-4 text-red-700">*</span>
                                     <x-input-error :messages="$errors->get('phone')"
                                         class="mt-2" />
                                 </div>
@@ -89,7 +94,6 @@
                                         name="city"
                                         placeholder="Enter your City & State/Province"
                                         :value="old('city')"
-                                        required
                                         autocomplete="city" />
                                     <x-input-error :messages="$errors->get('city')"
                                         class="mt-2" />
@@ -103,7 +107,6 @@
                                         name="zip_code"
                                         placeholder="Enter your Postal Code/Zipe"
                                         :value="old('zip_code')"
-                                        required
                                         autocomplete="zip_code" />
                                     <x-input-error :messages="$errors->get('zip_code')"
                                         class="mt-2" />
@@ -116,22 +119,72 @@
                                         name="country"
                                         placeholder="Enter your Country"
                                         :value="old('country')"
-                                        required
                                         autocomplete="country" />
                                     <x-input-error :messages="$errors->get('country')"
                                         class="mt-2" />
                                 </div>
+                                <!-- Interest Checkboxes -->
+                                <div class="text-lg my-3">
+                                    <p>Tell Us About Your Interests... </p>
+                                    <p class="text-center w-1/2">I want to...
+                                    </p>
+                                    <div id="interests"
+                                        class="my-3 text-sm flex flex-row flex-wrap gap-5">
+                                        <label for="attend_webinar">
+                                            <input type="checkbox"
+                                                id="attend_webinar"
+                                                name="attend_webinar"
+                                                class="mr-2 focus:ring-0"
+                                                value="">Attend a Webinar
+                                        </label>
+
+                                        <label for="sponsor_webinar">
+                                            <input type="checkbox"
+                                                id="sponsor_webinar"
+                                                name="sponsor_webinar"
+                                                class="mr-2 focus:ring-0"
+                                                value="">Sponsor a Webinar
+                                        </label>
+
+                                        <label for="teach_webinar">
+                                            <input type="checkbox"
+                                                id="teach_webinar"
+                                                name="teach_webinar"
+                                                class="mr-2 focus:ring-0"
+                                                value="">Teach a Webina
+                                        </label>
+
+                                        <label for="other">
+                                            <input type="checkbox"
+                                                id="other"
+                                                name="other"
+                                                class="mr-2 focus:ring-0"
+                                                value="">Other
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Additional Contact Message -->
+                                <div>
+                                    <p class="mb-3 text-lg">Tell Us How We Can
+                                        Help You...</p>
+                                    <textarea id="contact_msg"
+                                        class="inline mt-1 w-3/4 px-1 py-1 shadow-gray-500 border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm"
+                                        type="textarea"
+                                        name="contact_msg">
+                                    </textarea>
+                                    <span class="inline text-sm italic">upto
+                                        750 chars</span>
+                                </div>
                             </div>
                             <div class="px-4">
-                                <x-primary-button class="w-full justify-center">
-                                    Subscribe
+                                <x-primary-button
+                                    class="justify-center my-3  text-white bg-gradient-to-b from-pink-400 to bg-purple-950 hover:from-slate-400 hover:to-gray-900r">
+                                    Contact Me!
                                 </x-primary-button>
                             </div>
                         </form>
-
                     </div>
                 </section>
-
             </main>
 
 

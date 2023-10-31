@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\NewsletterMemberController;
+use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,9 +28,9 @@ Route::get('/how-it-works', function () {
     return view('how-it-works');
 })->name('how-it-works');
 
-Route::get('/contact-us', function () {
-    return view('contact-us');
-})->name('contact-us');
+Route::get('/contact-us', [ContactUsController::class, 'index'])->name('contact-us');
+
+Route::post('/contact-us', [ContactUsController::class, 'store'])->name('contact-us.store');
 
 Route::post('/newsletter-members/store', [NewsletterMemberController::class, 'store'])->name('newsletter-members.store');
 
