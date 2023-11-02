@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('city')->nullable();
             $table->string('zip_code', 15)->nullable();
             $table->string('country')->nullable();
-            $table->string('contact_msg', 800)->nullable();
+            $table->text('contact_msg')->nullable();
             $table->timestamps();
         });
     }

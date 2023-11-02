@@ -44,12 +44,6 @@
                             </span>
                         </p>
                     </article>
-                    <div id="read_more_btn"
-                        class="mt-2">
-                        <button id="readMoreButton"
-                            class="p-2 text-center font-bold text-white bg-gradient-to-b from-pink-400 to bg-purple-950 hover:from-slate-400 hover:to-gray-900 w-28">Read
-                            More</button>
-                    </div>
                     <br>
                 </section>
 
@@ -140,7 +134,7 @@
                     </article>
                     <div id="read_more_btn"
                         class="mt-2">
-                        <button x-text="show_more ? 'Read Less : 'Read More'"
+                        <button x-text="show_more ? 'Read Less' : 'Read More'"
                             x-on:click="show_more = !show_more"
                             id="readMoreButton"
                             class="p-2 text-center font-bold text-white bg-gradient-to-b from-pink-400 to bg-purple-950 hover:from-slate-400 hover:to-gray-900  w-28">Read
@@ -658,7 +652,7 @@
                 </section>
 
                 <section id="calender">
-                    calemder here
+                    Calendar Placeholder
                 </section>
 
                 <section id="newsletter">

@@ -84,9 +84,9 @@
                     class="border-2 rounded-xl border-purple-500 py-2 px-4">
                     <h3 class="text-2xl">Andreas Stano, Executive Director</h3>
                     <div id="container"
-                        class="flex flex-row-reverse gap-4 items-center">
+                        class="flex flex-row-reverse gap-4 items-start">
                         <article id="content_info">
-                            <p class="text-justify mt-3 text-sm">
+                            <p class="text-justify text-sm">
                                 <br>
                                 <span>
                                     Andreas Stano is presently the Executive
@@ -166,7 +166,7 @@
                             </p>
                         </article>
                         <div id="details"
-                            class="flex gap-2 flex-col">
+                            class="pt-3 flex gap-2 flex-col">
                             <img class="object-scale-down"
                                 src="{{ Vite::asset('resources/images/director.png') }}">
                             <button
@@ -428,7 +428,7 @@
                 </section>
 
                 <section id="calender">
-                    calemder here
+                    Calendar Placeholder
                 </section>
 
                 <section id="newsletter">

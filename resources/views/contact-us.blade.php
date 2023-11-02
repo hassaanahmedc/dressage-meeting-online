@@ -2,7 +2,7 @@
     <div class="flex flex-col gap-3">
         <h1
             class="flex items-center bg-gradient-to-b from-purple-600 to-fuchsia-950 text-3xl text-white px-3">
-            About us</h1>
+            Contact us</h1>
         <div id="container"
             class="flex flex-row gap-4">
             <main id="our_team"
@@ -168,12 +168,12 @@
                                     <p class="mb-3 text-lg">Tell Us How We Can
                                         Help You...</p>
                                     <textarea id="contact_msg"
-                                        class="inline mt-1 w-3/4 px-1 py-1 shadow-gray-500 border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm"
+                                        class="inline mt-1 w-full px-1 py-1 shadow-gray-500 border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm"
                                         type="textarea"
-                                        name="contact_msg">
-                                    </textarea>
-                                    <span class="inline text-sm italic">upto
-                                        750 chars</span>
+                                        rows="5"
+                                        name="contact_msg"></textarea>
+                                    <x-input-error :messages="$errors->get('contact_msg')"
+                                        class="mt-2" />
                                 </div>
                             </div>
                             <div class="px-4">
@@ -192,7 +192,7 @@
                 class="flex  flex-col basis-1/4 gap-3">
 
                 <section id="calender">
-                    calemder here
+                    Calendar Placeholder
                 </section>
 
                 <section id="newsletter">
