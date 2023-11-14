@@ -32,11 +32,11 @@
                     </svg>
                 </div>
                 <div class="z-50 bottom-2 right-2 absolute flex gap-2">
-                    <template x-for="i in 4" :key="i">
-                        <div
-                            x-on:click="current_slide = i - 1"
+                    <template x-for="i in 4"
+                        :key="i">
+                        <div x-on:click="current_slide = i - 1"
                             class="w-4 h-4 cursor-pointer rounded-full border-white bg-blue-900/10 border-2"
-                            :class="{'!bg-blue-900': current_slide === i - 1}">
+                            :class="{ '!bg-blue-900': current_slide === i - 1 }">
                         </div>
                     </template>
                 </div>
@@ -73,6 +73,16 @@
                 id="event-calendar">
                 {{-- TODO: Calendar goes here --}}
             </section>
+        </div>
+    </div>
+    <div class="flex mt-4">
+        <div class="basis-3/4 gap-2 grid grid-cols-3">
+            @foreach ($webinars as $webinar)
+                <x-webinar-card :webinar="$webinar" />
+            @endforeach
+        </div>
+        <div class="basis-1/4">
+            SPONSORS
         </div>
     </div>
 </x-guest-layout>
