@@ -76,13 +76,88 @@
         </div>
     </div>
     <div class="flex mt-4">
-        <div class="basis-3/4 gap-2 grid grid-cols-3">
+        <div class="content-start basis-3/4 gap-2 grid grid-cols-3">
             @foreach ($webinars as $webinar)
                 <x-webinar-card :webinar="$webinar" />
             @endforeach
         </div>
-        <div class="basis-1/4">
-            SPONSORS
+        <div class="ml-2 basis-1/4">
+            <h5
+                class="font-bold text-xl text-white bg-gradient-to-b from-gray-950 to-gray-700 py-1 px-2">
+                Our Sponsers</h5>
+            <div class="flex flex-col gap-4 mt-5">
+                <figure>
+                    <img
+                        src="{{ Vite::asset('resources/images/ThankYouSponsors.png') }}">
+                </figure>
+
+                <figure>
+                    <a href="">
+                        <img
+                            src="{{ Vite::asset('resources/images/NewSaddleFitBanners.png') }}">
+                    </a>
+                </figure>
+
+                <figure>
+                    <a href="">
+                        <img
+                            src="{{ Vite::asset('resources/images/KOTTAS_DressageMeeting_Ad.png') }}">
+                    </a>
+                </figure>
+
+
+                <figure>
+                    <a href="">
+                        <img
+                            src="{{ Vite::asset('resources/images/GlobalDressageForumNorthAmerica.png') }}">
+                    </a>
+                </figure>
+
+                <figure>
+
+                    <a href="">
+                        <img
+                            src="{{ Vite::asset('resources/images/DressageClinic-Head-Banner.png') }}">
+                    </a>
+                </figure>
+
+                <figure>
+                    <a href="">
+                        <img
+                            src="{{ Vite::asset('resources/images/NEDA-New-Education-Logo.png') }}">
+                    </a>
+                </figure>
+
+                <figure>
+                    <a href="">
+                        <img
+                            src="{{ Vite::asset('resources/images/GDCTA-Logo.png') }}">
+                    </a>
+                </figure>
+
+                <figure>
+                    <a href="">
+                        <img
+                            src="{{ Vite::asset('resources/images/PATH_Logo_Full.png') }}">
+                    </a>
+                </figure>
+
+                <figure>
+                    <a href="">
+                        <img
+                            src="{{ Vite::asset('resources/images/IDCTA-Region-Map.png') }}">
+                    </a>
+                </figure>
+
+
+                <figure>
+                    <a href="">
+                        <img
+                            src="{{ Vite::asset('resources/images/WDCBanne.png') }}">
+                    </a>
+                </figure>
+
+            </div>
         </div>
     </div>
 </x-guest-layout>
